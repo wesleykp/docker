@@ -1,0 +1,15 @@
+services:
+  gotify:
+    image: gotify/server
+    ports:
+      - 8070:80
+    env_file:
+      - .env    
+    environment:
+      - GOTIFY_DEFAULTUSER_PASS=${MDP}
+
+       
+    volumes:
+      - './gotify_data:/app/data'
+
+
